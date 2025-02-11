@@ -71,7 +71,7 @@ class HttpProcessor(BaseHTTPRequestHandler):
 
                 # Вставка данных пользователя
                 cursor.execute("""
-                    INSERT INTO users (fio, phone, email, date, gender, bio, check_agreement)
+                    INSERT INTO aplications_languages(fio, phone, email, date, gender, bio, check_agreement)
                     VALUES (%s, %s, %s, %s, %s, %s, %s)
                 """, (fio, phone, email, date, gender, bio, bool(check)))
 
