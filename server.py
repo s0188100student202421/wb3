@@ -64,10 +64,10 @@ class HttpProcessor(BaseHTTPRequestHandler):
         # Подключение к базе данных и сохранение данных
         try:
             connection = mysql.connector.connect(
-                host='localhost',
+                host='http://u68824.kubsu-dev.ru',
                 database='u68824',
                 user='u68824',
-                password='MyStrongPass'
+                password='6409075'
             )
 
             if connection.is_connected():
@@ -84,7 +84,7 @@ class HttpProcessor(BaseHTTPRequestHandler):
                 # Вставка выбранных языков программирования
                 for lang in languages:
                     cursor.execute("""
-                        INSERT INTO programming_languages (id, name)
+                        INSERT INTO programming_languages (id, guid)
                         VALUES (%s, %s)
                     """, (user_id, lang))
 
