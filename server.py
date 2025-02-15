@@ -64,10 +64,10 @@ class HttpProcessor(BaseHTTPRequestHandler):
         # Подключение к базе данных и сохранение данных
         try:
             connection = mysql.connector.connect(
-                host='http://u68824.kubsu-dev.ru',
+                host='http://158.160.129.181/',
                 database='u68824',
-                user='u68824',
-                password='6409075'
+                user='root',
+                password=''
             )
 
             if connection.is_connected():
