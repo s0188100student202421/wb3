@@ -12,7 +12,7 @@ class HttpProcessor(BaseHTTPRequestHandler):
         self.end_headers()
 
         # Читаем HTML-файл и отправляем его клиенту
-        with open('index.html', 'r') as file:
+        with open('server.html', 'r') as file:
             html_content = file.read()
             self.wfile.write(html_content.encode('utf-8'))
 
@@ -52,7 +52,6 @@ class HttpProcessor(BaseHTTPRequestHandler):
             errors.append("Nevernaya biografiya")
         if not check:
             errors.append("Neobkhodimo oznamitsya s kontraktom")
-        
         if errors:
             # Если есть ошибки, отправляем их клиенту
             self.send_response(400)
@@ -64,10 +63,10 @@ class HttpProcessor(BaseHTTPRequestHandler):
         # Подключение к базе данных и сохранение данных
         try:
             connection = mysql.connector.connect(
-                host='http://158.160.129.181/',
+                host='localhost',
                 database='u68824',
-                user='root',
-                password=''
+                user='u68824',
+                password='u68824'
             )
 
             if connection.is_connected():

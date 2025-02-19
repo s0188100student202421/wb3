@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <form action="" method="post" class="form">
+      <div>
+        <div class="head">
+          <h2><b>Форма обратной связи</b></h2>
+        </div>
+
+        <div>
+          <label> <input name="fio" class="input" placeholder="ФИО" /> </label>
+        </div>
+
+        <div>
+          <label> <input type="tel" name="phone" class="input" placeholder="Номер телефона" /> </label>
+        </div>
+
+        <div>
+          <label> <input name="email" type="email" class="input" placeholder="Почта" /> </label>
+        </div>
+
+        <div>
+          <label>
+            <input name="date" class="input" type="date" />
+          </label>
+        </div>
+
+        <div>
+          <div>Пол</div>
+          <div class="mb-1">
+            <label> <input type="radio" name="radio" value='M' /> М </label>
+            <label> <input type="radio" name="radio" value='F' /> Ж </label>
+          </div>
+        </div>
+
+        <div>
+  <label class="input">
+    <div>Любимый язык программирования</div>
+    <select class="my-2" name="language" multiple="multiple">
+      <option value="e9b5f1b2-0db6-4fcf-9e79-83ff91a4c79b">Pascal</option>
+      <option value="77ac0d79-2fe0-40cf-91bc-6b490080c053">C</option>
+      <option value="01bbf531-2f97-428b-b1f8-01518e771ff4">C++</option>
+      <option value="d7740e8d-11ed-4b3f-89a0-e25a00e28bbd">JavaScript</option>
+      <option value="b7637f64-61b7-4bcf-a92c-1106cfc6d6e3">PHP</option>
+      <option value="d1ffcccb-6359-4739-a49f-0b9f7245fa60">Python</option>
+      <option value="c17aefc4-e5b0-4786-9e13-2726f8f8a79c">Java</option>
+      <option value="9e34cb66-4ee8-43b1-917f-f25e4cbe8816">Haskel</option>
+      <option value="c9dbab3f-d1d7-41cf-81cc-fd8b8d94da39">Clojure</option>
+      <option value="ad2d9b2b-47f1-49e2-90b5-23dfe6fdac7f">Scala</option>
+    </select>
+  </label>
+</div>
+
+        <div class="biography">
+          <div>Биография</div>
+          <label>
+            <textarea class="input" name="bio" placeholder="Биография"> </textarea>
+          </label>
+        </div>
+
+        <div class = "form-group informed">
+          <label class="">
+            <label> <input id="informed" type="checkbox" name="check" /> с контрактом ознакомлен(а) </label>
+          </label>
+        </div>
+
+        <button type="submit" class="button my-3">Отправить</button>
+      </div>
+    </form>
+  </body>
+</html>
